@@ -1,0 +1,21 @@
+@import "../utils/variables";
+
+.layout{
+        padding: 20px;
+}
+
+.navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+
+.navlist{
+        display: flex;
+        align-items: row;
+
+        .navlink a{
+                text-decoration: none;
+                color: $coral-red;
+        }
+}

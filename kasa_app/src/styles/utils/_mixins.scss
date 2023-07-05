@@ -1,0 +1,17 @@
+// Font
+
+@mixin montserrat($variant, $size) {
+        @if $variant == 'medium' {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+        } @else if $variant == 'regular' {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 400;
+        } @else if $variant == 'bold' {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+        }
+        
+        font-size: $size;
+}
+
