@@ -5,6 +5,7 @@ import NotFound from "./pages/NotFound.jsx";
 import HousingCards from "./pages/HousingCards.jsx";
 import Layout from "./components/Layout.jsx";
 
+
 function App() {
         return (
                 <Router>
