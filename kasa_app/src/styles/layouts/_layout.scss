@@ -1,135 +1,99 @@
 body {
-        font-family: "Montserrat";
-        max-width: 1440px;
-        margin: auto;
+      font-family: "Montserrat";
+      margin: auto;
 }
 
-
-/*----------  Header  ----------*/
 
 header {
-        padding: 20px 20px 0 20px ;
+      padding: 20px 20px 0 20px;
 }
 
-
 .navbar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
 }
 
 .navlist {
-        display: flex;
-        margin: auto 0;
+      display: flex;
+      margin: auto 0;
 
-        .navlink {
-                text-transform: uppercase;
-                text-decoration: none;
-                color: $coral-red;
-                @include montserrat("medium", 12px);
+      .navlink {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $coral-red;
+            @include montserrat("medium", 12px);
 
-                &:hover{
-                        text-decoration: underline;
-                }
+            &:hover {
+                  text-decoration: underline;
+            }
 
-                &--home {
-                margin-right: 26px;
-                }
-        }
+            &--home {
+                  margin-right: 26px;
+            }
+      }
 }
 
 
-
-
-
-
-
-/*----------  Main ----------*/
-
-main{
-        padding: 27px 20px;
+main {
+      padding: 27px 20px;
 }
 
 
+footer {
+      width: 100%;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding: 66px 0 58px 0;
 
-
-
-
-
-/*----------  Footer ----------*/
-
-footer{
-        background-color: black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        padding: 66px 0 29px 0;
-
-        & p{
-                color: white;
-                @include montserrat("normal", 12px);
-                display: flex;
-                margin: 0 35%;
-        }
+      & p {
+            color: white;
+            @include montserrat("normal", 12px);
+            display: flex;
+            margin: 0 35%;
+      }
 }
-
-
 
 
 
 
 /*----------  MEDIA QUERIES  ----------*/
 
-// Tablets
-
-@media (min-width: 768px) {
-        header {
-                padding: 45px 45px ;
-        }
-
-
-}
-
-
 
 // Desktop
 
-@media (min-width: 1200px)  {
+@media (min-width: 1200px) {
+      header,
+      main {
+            max-width: 1240px;
+            margin: auto;
+      }
 
-        header,
-        main {
-                max-width: 1240px;
-                margin: auto;
-        }
+      header {
+            padding: 45px 0 0 0;
+      }
 
-        header {
-                padding: 45px 0 0 0;
-        }
+      main {
+            padding: 50px 0;
+      }
 
-        main {
-                padding: 50px 0;
-        }
+      .navlist .navlink {
+            text-transform: none;
+            @include montserrat("medium", 24px);
 
-        .navlist .navlink{
-                text-transform: none;
-                @include montserrat("medium", 24px);
+            &--home {
+                  margin-right: 57px;
+            }
+      }
 
-                &--home {
-                        margin-right: 57px;
-                }
-
-
-        }
-
-        footer{
-                gap: 28px;
-                & p{
-                        @include montserrat("medium", 24px);
-                }
-        }
-        
-
+      footer {
+            gap: 28px;
+            & p {
+                  @include montserrat("medium", 24px);
+            }
+      }
 }
-
