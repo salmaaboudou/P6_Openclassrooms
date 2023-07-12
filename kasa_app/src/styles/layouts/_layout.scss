@@ -3,6 +3,10 @@ body {
       margin: auto;
 }
 
+html{
+      font-size: 12px; //taille de police de base
+}
+
 
 header {
       padding: 20px 20px 0 20px;
@@ -22,7 +26,7 @@ header {
             text-transform: uppercase;
             text-decoration: none;
             color: $coral-red;
-            @include montserrat("medium", 12px);
+            @include montserrat("medium", 1rem);
 
             &:hover {
                   text-decoration: underline;
@@ -52,7 +56,7 @@ footer {
 
       & p {
             color: white;
-            @include montserrat("normal", 12px);
+            @include montserrat("medium", 1rem);
             display: flex;
             margin: 0 35%;
       }
@@ -77,13 +81,10 @@ footer {
             padding: 45px 0 0 0;
       }
 
-      main {
-            padding: 50px 0;
-      }
 
       .navlist .navlink {
             text-transform: none;
-            @include montserrat("medium", 24px);
+            @include montserrat("medium", 2rem);
 
             &--home {
                   margin-right: 57px;
@@ -93,7 +94,7 @@ footer {
       footer {
             gap: 28px;
             & p {
-                  @include montserrat("medium", 24px);
+                  @include montserrat("medium", 2rem);
             }
       }
 }
