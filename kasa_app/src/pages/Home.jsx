@@ -1,28 +1,26 @@
-import React from "react";
-import bannerDesktop from "../assets/desktop/image-banner-desktop.png";
-import bannerMobile from "../assets/mobile/image-banner-mobile.png";
+import React, { useState } from "react";
 import Card from "../components/Card";
+import Banner from "../components/Banner";
+import { Link } from "react-router-dom";
+import housingData from "../logement.json";
 
-function Home(props) {
-      const { isBigScreen } = props;
+
+function Home({isBigScreen}) {
 
       return (
             <div>
-                  <div
-                        className="banner"
-                        style={isBigScreen ? { backgroundImage: `url(${bannerDesktop})` } : { backgroundImage: `url(${bannerMobile})` }}>
-                        <span className="banner__text">
-                              Chez vous, <span className="banner__text--line-break">partout et ailleurs</span>
-                        </span>
-                  </div>
+                  <Banner isBigScreen={isBigScreen}/>
 
                   <div className="home-cards__container">
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
+                        {housingData.map((housing) => (
+                              <Link to={`/housing-page/${housing.id}`} className="home-card__link">
+                                          <Card 
+                                                key={housing.id} 
+                                                title={housing.title} 
+                                                image={housing.cover} 
+                                          />
+                              </Link>
+                        ))}
                   </div>
             </div>
       );

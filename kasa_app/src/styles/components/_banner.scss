@@ -1,0 +1,57 @@
+.banner {
+      position: relative;
+      height: 111px;
+      border-radius: 10px;
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      background-size: cover;
+      @extend %flex-center;
+}
+
+.banner::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.30000001192092896;
+      background-color: black;
+      border-radius: inherit;
+}
+
+.banner__text {
+      @include montserrat("medium", 2rem);
+      text-align: left;
+      color: white;
+      z-index: 10000;
+      margin-left: 16px;
+
+      &--line-break {
+            display: inline-block;
+            word-break: break-word;
+      }
+}
+
+/*----------  MEDIA QUERIES  ----------*/
+
+// Tablet
+
+@media (min-width: 782px) and (max-width: 1200px) {
+        .banner {
+              height: 200px;
+              border-radius: 25px;
+              background-position: 0 50%;
+        }
+}
+
+// Desktop
+
+@media (min-width: 1200px) {
+        .banner {
+              height: 223px;
+              border-radius: 25px;
+              background-position: 0 50%;
+        }
+        .banner__text {
+              font-size: 3rem;
+        }
+}
