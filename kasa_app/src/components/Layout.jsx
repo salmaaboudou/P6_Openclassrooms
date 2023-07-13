@@ -12,7 +12,7 @@ function Layout(props) {
                   <header className="header">
                         <nav className="navbar">
                               <Link to="/">
-                                    <img src={isSmallScreen ? logoMobile : logoDesktop} alt="Logo Kasa" />
+                                    <img src={isSmallScreen ? logoMobile : logoDesktop} alt="Logo Kasa"/>
                               </Link>
                               <ul className="navlist">
                                     <li>

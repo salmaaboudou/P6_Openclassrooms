@@ -1,0 +1,27 @@
+
+.dropdown-menus__about {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+      
+}
+
+/*----------  MEDIA QUERIES  ----------*/
+
+// Desktop
+
+@media (min-width: 1200px) {
+      .about-page__container{
+            min-width: 1240px;
+      }
+
+      .dropdown-menus__about {
+            max-width: 1023px;
+            margin: 38px auto;
+      }
+
+
+      
+}

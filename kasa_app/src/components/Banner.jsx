@@ -1,13 +1,19 @@
 import React from "react";
-import bannerDesktop from "../assets/desktop/image-banner-desktop.png";
-import bannerMobile from "../assets/mobile/image-banner-mobile.png";
 
-function Banner({isBigScreen}) {
+
+function Banner(props) {
+
+      const { isBigScreen, desktopImage, mobileImage, text, height } = props
       return (
-            <div className="banner" style={isBigScreen ? { backgroundImage: `url(${bannerDesktop})` } : { backgroundImage: `url(${bannerMobile})` }}>
-                  <span className="banner__text">
-                        Chez vous, <span className="banner__text--line-break">partout et ailleurs</span>
-                  </span>
+            <div 
+                  className="banner" 
+                  style={{
+                        backgroundImage: isBigScreen ? `url(${desktopImage})` : `url(${mobileImage})`,
+                        height: height ? `${height}px` : "auto"
+                  }}
+            >
+                  
+                  <span className="banner__text">{text}</span>
             </div>
       );
 }

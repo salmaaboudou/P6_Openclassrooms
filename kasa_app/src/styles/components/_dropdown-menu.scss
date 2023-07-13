@@ -1,0 +1,42 @@
+.dropdown-menu__container {
+      display: flex;
+      flex-direction: column;
+      
+}
+
+.dropdown-menu {
+      background: $coral-red;
+      border-radius: 5px;
+      padding: 10px 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.dropdown-menu__text {
+      @include montserrat("medium", 13px);
+      color: white;
+}
+
+.dropdown-menu__option{
+      color: $coral-red;
+      @include montserrat("regular", 13px);
+      padding: 15px;
+}
+
+/*----------  MEDIA QUERIES  ----------*/
+
+// Desktop 
+
+@media (min-width: 1200px)  {
+      
+      .dropdown-menu__text {
+            font-size: 24px;
+      }
+
+      .dropdown-menu__option{
+            font-size: 20px;
+      }
+}
+
