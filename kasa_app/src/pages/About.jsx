@@ -18,10 +18,10 @@ function About() {
                                 height="223"
                         />
                         <div className="dropdown-menus__about">
-                                <DropdownMenu options={option1} text="Fiabilité" />
-                                <DropdownMenu options={option2} text="Respect"  />
-                                <DropdownMenu options={option2} text="Service" />
-                                <DropdownMenu options={option3} text="Sécurité" />
+                                <DropdownMenu options={option1} label="Fiabilité" />
+                                <DropdownMenu options={option2} label="Respect"  />
+                                <DropdownMenu options={option2} label="Service"  />
+                                <DropdownMenu options={option3} label="Sécurité"  />
                         </div>
 
                 </div>

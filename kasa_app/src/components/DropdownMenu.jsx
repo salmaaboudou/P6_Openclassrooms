@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import arrowUp from "../assets/arrow-up.svg";
-import arrowDown from "../assets/arrow-down.svg";
 
-function DropdownMenu({ text, options }) {
+function DropdownMenu({ label, options }) {
       const [isOpen, setIsOpen] = useState(false);
+      const menuClassName = isOpen ? 'dropdown-menu__options open' : 'dropdown-menu__options';
 
       const handleToggle = () => {
             setIsOpen(!isOpen);
@@ -12,14 +12,19 @@ function DropdownMenu({ text, options }) {
 
       return (
             <div className="dropdown-menu__container">
-                  <div className="dropdown-menu">
-                        <span className="dropdown-menu__text">{text}</span>
+                  <div className="dropdown-menu" >
+                        <span className="dropdown-menu__label">{label}</span>
                         <button className="dropdown-menu__toggle" onClick={handleToggle}>
-                              <img className="dropdown-menu__arrow" src={isOpen ? arrowDown : arrowUp} alt="dropdown arrow" />
+                              <img 
+                                    className={`dropdown-menu__arrow ${isOpen ? 'open' : ''}`}
+                                    src={arrowUp} 
+                                    alt="dropdown arrow" 
+                                    
+                              />
                         </button>
                   </div>
                   {isOpen && (
-                        <ul className="dropdown-menu__options">
+                        <ul className={menuClassName}>
                               {options.map((option, index) => (
                                     <li key={index} className="dropdown-menu__option">
                                           {option}

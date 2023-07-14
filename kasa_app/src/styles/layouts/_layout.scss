@@ -23,6 +23,7 @@ header {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      
 }
 
 .navlist {
@@ -33,7 +34,7 @@ header {
             text-transform: uppercase;
             text-decoration: none;
             color: $coral-red;
-            @include montserrat("medium", 1rem);
+            @include montserrat("medium", 1.1rem);
 
             &:hover {
                   text-decoration: underline;

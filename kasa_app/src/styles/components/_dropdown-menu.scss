@@ -1,25 +1,54 @@
 .dropdown-menu__container {
       display: flex;
       flex-direction: column;
+      position: relative;
+      .dropdown-menu {
+            background: $coral-red;
+            border-radius: 5px;
+            height: 35px;
+            padding: 10px 0 10px 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+      }
+}
+
+.dropdown-menu__label {
+      @include montserrat("medium", 15px);
+      color: white;
       
 }
 
-.dropdown-menu {
-      background: $coral-red;
-      border-radius: 5px;
-      padding: 10px 15px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+.dropdown-menu__arrow {
+      width: 45px;
+      height: 45px;
+      padding: 10px;
+      transition: transform 300ms ease-out;
+
+      &.open {
+            transform: rotate(-180deg);
+      }
 }
 
-.dropdown-menu__text {
-      @include montserrat("medium", 13px);
-      color: white;
+.dropdown-menu__options.open {
+      
+      animation: slideIn 300ms ease-out forwards;
+
 }
 
-.dropdown-menu__option{
+@keyframes slideIn {
+      0% {
+            max-height: 0;
+            transform: translateY(-50px); 
+      }
+      100% {
+            max-height: 100%; 
+            transform: translateY(0); 
+      }
+}
+
+.dropdown-menu__option {
       color: $coral-red;
       @include montserrat("regular", 13px);
       padding: 15px;
@@ -27,16 +56,27 @@
 
 /*----------  MEDIA QUERIES  ----------*/
 
-// Desktop 
+// Desktop
 
-@media (min-width: 1200px)  {
-      
-      .dropdown-menu__text {
-            font-size: 24px;
+@media (min-width: 1200px) {
+
+      .dropdown-menu{
+            height: 54px !important;
+            padding: 10px 0px 10px 15px !important;
       }
 
-      .dropdown-menu__option{
+      .dropdown-menu__label {
+            font-size: 24px;
+            
+      }
+
+      .dropdown-menu__arrow{
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+      }
+
+      .dropdown-menu__option {
             font-size: 20px;
       }
 }
-
