@@ -1,4 +1,45 @@
-.not-found__container{
-        display: flex;
-        flex-direction: column;
+
+.not-found__container {
+      @extend %flex-center;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-around;
+      
+}
+
+.not-found__text-1,.not-found__text-2,.not-found__text-3{
+      color: $coral-red;
+}
+
+
+.not-found__text-1 {
+      @include montserrat("bold", 96px);
+}
+
+.not-found__text-2 {
+      @include montserrat("medium", 18px);
+      text-align: center;
+}
+
+.not-found__text-3 {
+      @include montserrat("medium", 14px);
+      text-decoration: underline;
+      
+}
+
+// Desktop
+
+@media (min-width: 1200px) {
+
+      .not-found__text-1 {
+            font-size: 288px;
+      }
+
+      .not-found__text-2 {
+            font-size: 36px;
+      }
+
+      .not-found__text-3 {
+            font-size: 18px;
+      }
 }
