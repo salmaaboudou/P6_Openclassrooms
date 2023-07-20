@@ -1,0 +1,41 @@
+.tag {
+      height: 18px;
+      border-radius: 5px;
+      background-color: $coral-red;
+      @extend %flex-center;
+      padding: 8px;
+}
+
+.tag__name {
+      @include montserrat("medium", 10px);
+      color: white;
+}
+
+/*----------  MEDIA QUERIES  ----------*/
+
+// Tablet
+
+@media (min-width: 768px) and (max-width: 1200px) {
+      .tag {
+            padding: 10px;
+            border-radius: 10px;
+      }
+
+      .tag__name {
+            font-size: 12px;
+      }
+
+}
+
+// Desktop
+
+@media (min-width: 768px) {
+      .tag {
+            padding: 13px;
+            border-radius: 10px;
+      }
+
+      .tag__name {
+            font-size: 14px;
+      }
+}

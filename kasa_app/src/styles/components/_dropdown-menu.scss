@@ -2,6 +2,7 @@
       display: flex;
       flex-direction: column;
       position: relative;
+      width: 100%;
       .dropdown-menu {
             background: $coral-red;
             border-radius: 5px;
@@ -48,13 +49,25 @@
       }
 }
 
+.dropdown-menu__options{
+      padding: 15px;
+}
 .dropdown-menu__option {
       color: $coral-red;
       @include montserrat("regular", 13px);
-      padding: 15px;
+      
 }
 
 /*----------  MEDIA QUERIES  ----------*/
+
+// Tablet
+
+@media (min-width: 768px) and (max-width: 1200px){
+      .dropdown-menu__label {
+            font-size: 18px;
+            
+      }
+}
 
 // Desktop
 
@@ -77,6 +90,6 @@
       }
 
       .dropdown-menu__option {
-            font-size: 20px;
+            font-size: 18px;
       }
 }

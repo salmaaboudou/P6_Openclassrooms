@@ -13,6 +13,7 @@ html {
 main{
       flex: 1;
       margin: 27px 20px;
+      
 }
 
 header {
@@ -34,7 +35,7 @@ header {
             text-transform: uppercase;
             text-decoration: none;
             color: $coral-red;
-            @include montserrat("medium", 1.1rem);
+            @include montserrat("medium", 1rem);
 
             &:hover {
                   text-decoration: underline;
@@ -63,6 +64,7 @@ footer {
             @include montserrat("medium", 1rem);
             display: flex;
             margin: 0 35%;
+            text-align: center;
       }
 }
 
@@ -103,4 +105,14 @@ footer {
                   @include montserrat("medium", 2rem);
             }
       }
+}
+
+// Special
+
+@media (min-width: 1200px) and (max-width:1300px) {
+      header, main{
+            padding: 0 30px !important ;
+      }
+
+      
 }

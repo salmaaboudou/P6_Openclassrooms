@@ -1,0 +1,138 @@
+// HOUSING INFOS
+
+.housing-pages {
+      color: $coral-red;
+}
+
+.housing__title {
+      @include montserrat("medium", 18px);
+      margin-top: 15px;
+}
+
+.housing__location {
+      @include montserrat("medium", 14px);
+      margin-top: 9px;
+}
+
+.tags__container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 10px;
+}
+
+// HOST INFO
+
+.host {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      justify-content: flex-end;
+      align-items: center;
+}
+
+.host__photo {
+      width: 32px;
+      height: 32px;
+      border-radius: 1000px;
+      background-repeat: no-repeat;
+      background-size: contain;
+}
+
+.host__name {
+      @include montserrat("medium", 12px);
+      text-align: right;
+      width: 50%;
+}
+
+.rate-and-host__container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 18px;
+}
+
+// DROPDOWN MENUS
+
+.drop-down-location__container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 13px;
+      margin-bottom: 50px;
+      gap: 20px;
+}
+/*----------  MEDIA QUERIES  ----------*/
+
+// Tablet
+
+@media (min-width: 768px) and (max-width: 1200px) {
+      .housing__title {
+            font-size: 24px;
+      }
+      .housing__location {
+            font-size: 16px;
+      }
+      .drop-down-location__container {
+            gap: 20px;
+      }
+      .host__photo {
+            width: 60px;
+            height: 60px;
+      }
+      .host__name {
+            font-size: 16px;
+      }
+}
+
+// Desktop
+
+@media (min-width: 1200px) {
+      .housing__title {
+            font-size: 36px;
+      }
+      .housing__location {
+            font-size: 18px;
+      }
+      .drop-down-location__container {
+            gap: 70px;
+      }
+      .host__photo {
+            width: 64px;
+            height: 64px;
+      }
+      .host__name {
+            font-size: 18px;
+      }
+}
+
+// Tablet & Desktop
+
+@media (min-width: 768px) {
+      .drop-down-location__container {
+            flex-direction: row;
+      }
+      .infos-location__container {
+            display: flex;
+            flex-direction: row;
+      }
+      .rate-and-host__container {
+            flex-direction: column-reverse;
+            gap: 21px;
+      }
+      .tags__container{
+            margin-top: 21px;
+      }
+      .rate-and-host__container {
+            align-items: end;
+      }
+      .titles-and-tags__container {
+            width: 90%;
+      }
+
+      .drop-down-location__container{
+            margin-top: 24px;
+      }
+}

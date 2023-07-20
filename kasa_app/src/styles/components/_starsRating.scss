@@ -1,0 +1,23 @@
+
+
+/*----------  MEDIA QUERIES  ----------*/
+
+// Tablet
+
+@media (min-width: 768px) and (max-width: 1200px) {
+        .star-icon{
+                width: 24px !important;
+                height: 24px !important;
+        }
+}
+
+// Desktop
+
+@media (min-width: 1200px){
+        .star-icon{
+                width: 36px !important;
+                height: 36px !important;
+        }
+
+}
+
