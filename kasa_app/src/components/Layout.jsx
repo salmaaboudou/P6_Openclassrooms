@@ -17,7 +17,7 @@ function Layout(props) {
                               <ul className="navlist">
                                     <li>
                                           <Link to="/" className="navlink navlink--home">
-                                                Acceuil
+                                                Accueil
                                           </Link>
                                     </li>
                                     <li>
