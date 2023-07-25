@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import housingData from "../logement.json";
 import Carrousel from "../components/Carrousel";
 import StarRating from "../components/StarsRating";
 import DropdownMenu from "../components/DropdownMenu";
 import Tags from "../components/Tags";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
+
 
 function HousingPages() {
       const { id } = useParams(); //extraction id de l'url
-
-      const housing = housingData.find((house) => house.id === id);
-
+      const housing = housingData.find((house) => house.id === id); // Trouver l'ID dans le fichier json
+      const isValidId = housingData.some((house) => house.id === id); // Vérifier si l'ID est valide
+      // Si l'ID n'est pas valide, rediriger vers la page NotFound
+      if (!isValidId) {
+            return <Navigate to="/not-found" replace={true} />;
+      }
       return (
             <div className="housing-pages">
                   {housing && <Carrousel images={housing.pictures} />}

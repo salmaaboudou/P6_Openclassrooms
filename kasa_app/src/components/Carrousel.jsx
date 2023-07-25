@@ -22,9 +22,11 @@ function Carrousel({ images }) {
 
       return (
             <div className="carrousel__container">
-                  <div className="carrousel__numbering">
-                        {currentImageNumber}/{totalImagesNumber}
-                  </div>
+                  {images.length > 1 && (
+                        <div className="carrousel__numbering">
+                              {currentImageNumber}/{totalImagesNumber}
+                        </div>
+                  )}
                   <img className="carrousel__images" src={images[currentImageIndex]} alt="image carrousel" />
                         
                   {images.length > 1 && (
