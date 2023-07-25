@@ -34,6 +34,7 @@ function App() {
                               <Route path="/housing-page/:id" element={<HousingPages />} />
                               <Route path="/about" element={<About />} />
                               <Route path="*" element={<NotFound />} />
+                              <Route path="/not-found" element={<NotFound />} />
                         </Routes>
                   </Layout>
             </Router>
