@@ -2,7 +2,8 @@ import React from "react";
 
 const StarRating = ({ rating }) => {
 
-      const filledStars = Array.from({ length: 5 }, (_,index) => index < rating); //Chaque élément du tableau sera un booléen indiquant si l'étoile est remplie (true) ou vide (false) , "index < rating" est la condition qui détermine si l'étoile doit être remplie ou vide.
+      const filledStars = Array.from({ length: 5 }, (_,index) => index < rating); //Chaque élément du tableau sera un booléen indiquant si l'étoile est remplie (true) ou vide (false) , 
+      // "index < rating" est la condition qui détermine si l'étoile doit être remplie ou vide.
 
       return (
             <div className="stars-icons__container">
