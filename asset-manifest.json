@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/P6_Openclassrooms/static/css/main.65546c9f.css",
-    "main.js": "/P6_Openclassrooms/static/js/main.797e7d95.js",
+    "main.js": "/P6_Openclassrooms/static/js/main.e2db3d5c.js",
     "static/media/banner-about-desktop.png": "/P6_Openclassrooms/static/media/banner-about-desktop.dc7a08e1faa2e14de0bd.png",
     "static/media/banner-home-desktop.png": "/P6_Openclassrooms/static/media/banner-home-desktop.480b7342b08276b46e77.png",
     "static/media/banner-about-mobile.png": "/P6_Openclassrooms/static/media/banner-about-mobile.891e3e137c5e0544a89a.png",
@@ -12,10 +12,10 @@
     "static/media/right-arrow.svg": "/P6_Openclassrooms/static/media/right-arrow.beb89246f716f46deded3cc9bc6cdcd1.svg",
     "static/media/left-arrow.svg": "/P6_Openclassrooms/static/media/left-arrow.64e4843229e02a08b45d34df81d74736.svg",
     "main.65546c9f.css.map": "/P6_Openclassrooms/static/css/main.65546c9f.css.map",
-    "main.797e7d95.js.map": "/P6_Openclassrooms/static/js/main.797e7d95.js.map"
+    "main.e2db3d5c.js.map": "/P6_Openclassrooms/static/js/main.e2db3d5c.js.map"
   },
   "entrypoints": [
     "static/css/main.65546c9f.css",
-    "static/js/main.797e7d95.js"
+    "static/js/main.e2db3d5c.js"
   ]
 }
